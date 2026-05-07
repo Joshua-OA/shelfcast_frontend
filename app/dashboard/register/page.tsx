@@ -78,7 +78,7 @@ export default function RegisterDataPage() {
 
     // Run through analysis steps
     for (let i = 1; i < ANALYSIS_STEPS.length; i++) {
-      await new Promise(r => setTimeout(r, i === ANALYSIS_STEPS.length - 1 ? 1200 : 900));
+      await new Promise(r => setTimeout(r, i === ANALYSIS_STEPS.length - 1 ? 4000 : 3000));
       setStepIndex(i);
     }
 
@@ -100,7 +100,7 @@ export default function RegisterDataPage() {
     setBatches(getBatches());
     setLocalActive(newActive);
 
-    await new Promise(r => setTimeout(r, 1200));
+    await new Promise(r => setTimeout(r, 4000));
     router.push("/dashboard");
   }, [files, router]);
 
